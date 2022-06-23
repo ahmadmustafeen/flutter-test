@@ -11,6 +11,11 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
 @override
+
+  final _email = new TextEditingController();
+  final _password = new TextEditingController();
+  final _name = new TextEditingController();
+  final _number = new TextEditingController();
   Widget build(BuildContext context) {
     return new Scaffold(
       body: SingleChildScrollView(
@@ -43,8 +48,11 @@ class _SignUpState extends State<SignUp> {
             Center(
               child: Container(
                 width: 300,
+                
                 child: TextFormField(
-                  decoration: InputDecoration(
+                
+                    controller: _email,
+                    decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
@@ -58,6 +66,9 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  obscureText: true,
+                  controller: _password,
+                  
                   decoration: InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
@@ -72,6 +83,7 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _name,
                   decoration: InputDecoration(
                     labelText: 'Name',
                     border: OutlineInputBorder(),
@@ -86,8 +98,10 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _number,
+                    keyboardType:TextInputType.phone,
                   decoration: InputDecoration(
-                    labelText: 'User Name',
+                    labelText: 'Number',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -95,12 +109,16 @@ class _SignUpState extends State<SignUp> {
             ),
             OutlinedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return OTPScreen();
-                  }),
-                ); // Respond to button press
+
+                var email = _email.text;
+                var password = _password.text;
+                print(email);
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) {
+                //     return OTPScreen();
+                //   }),
+                // ); // Respond to button press
               },
               child: Container(
                 width: 100,
