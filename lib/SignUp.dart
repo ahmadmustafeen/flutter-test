@@ -56,6 +56,22 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _userName,
+                  decoration: InputDecoration(
+                    labelText: 'Name',
+                    hintText: "Name",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: Container(
+                width: 300,
+                child: TextFormField(
                   controller: _email,
                   decoration: InputDecoration(
                     labelText: 'Email',
@@ -89,23 +105,8 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
-                  controller: _userName,
-                  decoration: InputDecoration(
-                    labelText: 'Name',
-                    hintText: "Name",
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Center(
-              child: Container(
-                width: 300,
-                child: TextFormField(
                   controller: _phoneNumber,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
                     hintText: "Phone Number",
