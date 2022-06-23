@@ -47,9 +47,14 @@ class Splash2 extends StatelessWidget {
 
 class FirstScreen extends StatelessWidget {
   // @override
-  // final myController = TextEditingController();
   final _email = new TextEditingController();
   final _password = new TextEditingController();
+
+// void loginHandler() {
+//   print(_email.text);
+//   print(_password.text);
+
+// }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,12 +94,11 @@ class FirstScreen extends StatelessWidget {
             SizedBox(
               height: 80,
             ),
-            
             Center(
               child: Container(
                 width: 300,
                 child: TextFormField(
-                    controller: _email,
+                  controller: _email,
                   decoration: InputDecoration(
                     labelText: 'Email',
                     hintText: "Email",
@@ -111,10 +115,10 @@ class FirstScreen extends StatelessWidget {
                 width: 300,
                 child: TextFormField(
                   obscureText: true,
-                   controller: _password,
+                  controller: _password,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                     hintText: "Password",
+                    hintText: "Password",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -122,10 +126,10 @@ class FirstScreen extends StatelessWidget {
             ),
             OutlinedButton(
               onPressed: () {
-                var email = _email.text;
-                var password = _password.text;
-                print(email);
-                print(password);
+                // var email = _email.text;
+                // var password = _password.text;
+                // print(email);
+                // print(password);
 
                 Navigator.push(
                   context,
@@ -137,6 +141,7 @@ class FirstScreen extends StatelessWidget {
               child: Container(
                 width: 100,
                 child: Center(
+                  
                   child: Text("Login",
                       style: TextStyle(
                         color: Colors.amber,

@@ -16,22 +16,22 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         // leading: Icon(Icons.menu),
         title: new Text(
-          'Ibex Coin',
+          'Home Screen',
         ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            // child: Icon(Icons.search),
-          ),
-          Icon(Icons.more_vert),
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 16),
+        //     // child: Icon(Icons.search),
+        //   ),
+        //   Icon(Icons.more_vert),
+        // ],
         backgroundColor: Colors.amber,
       ),
       body: Center(
           child: Column(
         children: [
           SizedBox(
-            height: 200,
+            height: 300,
           ),
           OutlinedButton(
             onPressed: () {
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Center(
                 child: Text("Log out",
                     style: TextStyle(
-                      color: Colors.green,
+                      color: Colors.red,
                     )),
               ),
             ),
