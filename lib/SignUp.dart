@@ -9,8 +9,20 @@ class SignUp extends StatefulWidget {
   _SignUpState createState() => _SignUpState();
 }
 
+final _email = new TextEditingController();
+final _password = new TextEditingController();
+final _userName = new TextEditingController();
+final _phoneNumber = new TextEditingController();
+
+void registerHandler() {
+  print(_email.text);
+  print(_password.text);
+  print(_userName.text);
+  print(_phoneNumber.text);
+}
+
 class _SignUpState extends State<SignUp> {
-@override
+  @override
   Widget build(BuildContext context) {
     return new Scaffold(
       body: SingleChildScrollView(
@@ -44,8 +56,10 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _email,
                   decoration: InputDecoration(
                     labelText: 'Email',
+                    hintText: "Email",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -58,8 +72,11 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  obscureText: true,
+                  controller: _password,
                   decoration: InputDecoration(
                     labelText: 'Password',
+                    hintText: "Password",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -72,8 +89,10 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _userName,
                   decoration: InputDecoration(
                     labelText: 'Name',
+                    hintText: "Name",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -86,10 +105,24 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 width: 300,
                 child: TextFormField(
+                  controller: _phoneNumber,
                   decoration: InputDecoration(
-                    labelText: 'User Name',
+                    labelText: 'Phone Number',
+                    hintText: "Phone Number",
                     border: OutlineInputBorder(),
                   ),
+                ),
+              ),
+            ),
+            OutlinedButton(
+              onPressed: registerHandler,
+              child: Container(
+                width: 100,
+                child: Center(
+                  child: Text("Register",
+                      style: TextStyle(
+                        color: Colors.blueAccent,
+                      )),
                 ),
               ),
             ),
