@@ -1,3 +1,4 @@
+import 'package:demo/OtpScreen.dart';
 import 'package:demo/main.dart';
 import 'package:flutter/material.dart';
 
@@ -97,7 +98,7 @@ class _SignUpState extends State<SignUp> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return FirstScreen();
+                    return OTPScreen();
                   }),
                 ); // Respond to button press
               },

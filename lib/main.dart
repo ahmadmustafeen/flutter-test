@@ -127,12 +127,12 @@ class FirstScreen extends StatelessWidget {
                 print(email);
                 print(password);
 
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) {
-                //     return HomeScreen();
-                //   }),
-                // ); // Respond to button press
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return HomeScreen();
+                  }),
+                ); // Respond to button press
               },
               child: Container(
                 width: 100,
